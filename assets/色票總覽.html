@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>南瓜暖島美學．色票總覽</title>
+<style>
+:root{
+  --ink-forest:#2D4321; --ink-deep:#1D3314; --ink-panel:#1C3D20; --ink-line:#10240F;
+  --matcha:#81BD49; --matcha-deep:#62B149; --moss:#898B63;
+  --clay:#D4A373; --ochre:#B99A6B; --bark:#4A3B18;
+  --paper:#FCF9F0; --paper-warm:#F7F1DC; --linen:#F4F1E8; --wheat:#E8D9B5; --ash:#DDDAD1;
+  --gold:#F2C94C; --alert:#C8483A; --sky-hi:#8FC7D4; --sky-lo:#C7DDD0;
+  --text:#2A2418; --text-soft:#5C5334; --text-on-dark:#FDFCE3;
+  --shadow:0 4px 0 rgba(30,50,25,.35); --shadow-sm:0 3px 0 rgba(40,60,30,.25);
+  --shadow-in:inset 0 2px 0 rgba(255,255,255,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--paper);color:var(--text);padding:44px 40px 80px;position:relative;
+  font-family:"Be Vietnam Pro","Yuanti TC","YouYuan","PingFang TC","Heiti TC","Microsoft JhengHei",sans-serif;
+  font-weight:600;}
+#grain{position:fixed;inset:0;pointer-events:none;opacity:.32;z-index:99;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/><feColorMatrix type='matrix' values='0 0 0 0 0.5 0 0 0 0 0.47 0 0 0 0 0.4 0 0 0 0.05 0'/></filter><rect width='140' height='140' filter='url(%23n)'/></svg>");}
+.wrap{max-width:1180px;margin:0 auto;}
+header{background:var(--ink-forest);border:3px solid var(--ink-line);border-radius:22px;
+  padding:26px 32px;box-shadow:var(--shadow),var(--shadow-in);margin-bottom:34px;}
+header h1{font-size:32px;font-weight:800;color:var(--text-on-dark);letter-spacing:1px;}
+header p{font-size:17px;color:var(--matcha);margin-top:7px;font-weight:700;}
+h2{font-size:23px;font-weight:800;color:var(--ink-forest);margin:38px 0 16px;
+  display:flex;align-items:center;gap:12px;}
+h2::after{content:"";flex:1;height:3px;background:var(--ash);border-radius:2px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(196px,1fr));gap:16px;}
+.sw{border:3px solid #2E2A1F;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);
+  background:var(--paper-warm);cursor:pointer;transition:transform .12s;}
+.sw:hover{transform:translateY(-3px);}
+.sw .chip{height:92px;display:block;}
+.sw .meta{padding:10px 13px 12px;}
+.sw .nm{font-size:16px;font-weight:800;color:var(--text);}
+.sw .hex{font-size:15px;font-weight:700;color:var(--text-soft);margin-top:2px;
+  font-family:"SF Mono",Menlo,monospace;letter-spacing:.5px;}
+.sw .use{font-size:13.5px;color:var(--text-soft);margin-top:5px;line-height:1.35;}
+.row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;}
+.card{background:var(--paper-warm);border:2.5px solid #CFC49E;border-radius:14px;
+  padding:18px 22px;flex:1;min-width:280px;}
+.card h3{font-size:19px;font-weight:800;color:#233018;margin-bottom:10px;}
+.panel{background:var(--ink-panel);border:3px solid var(--ink-line);border-radius:20px;
+  padding:20px 22px;box-shadow:var(--shadow),var(--shadow-in);color:var(--text-on-dark);
+  flex:1;min-width:280px;}
+.panel h3{font-size:17px;font-weight:800;color:#F2EFA8;letter-spacing:1px;margin-bottom:10px;}
+.panel .sub{font-size:16px;color:#B4C494;line-height:1.5;}
+.panel-inset{background:var(--ink-deep);border:2px solid #2C4A22;border-radius:14px;
+  padding:12px 14px;margin-top:13px;}
+.btn{height:46px;padding:0 22px;border-radius:12px;border:3px solid var(--ink-line);
+  font-size:17px;font-weight:800;font-family:inherit;cursor:pointer;transition:transform .1s;}
+.btn:hover{transform:translateY(-2px);} .btn:active{transform:translateY(2px);box-shadow:none!important;}
+.btn-primary{background:var(--matcha-deep);color:#0E2408;box-shadow:0 3px 0 rgba(10,25,8,.5);}
+.btn-secondary{background:var(--paper-warm);color:#233018;border-color:#2E2A1F;box-shadow:var(--shadow-sm);}
+.capsule{height:52px;padding:0 26px;border-radius:28px;background:var(--paper-warm);
+  border:3.5px solid #2E2A1F;box-shadow:var(--shadow);display:flex;align-items:center;
+  font-size:22px;font-weight:800;letter-spacing:6px;text-indent:6px;color:#211D12;cursor:pointer;}
+.ibtn{width:72px;height:72px;border-radius:18px;background:var(--ink-panel);
+  border:3px solid var(--ink-line);display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow),var(--shadow-in);cursor:pointer;transition:transform .12s;}
+.ibtn:hover{transform:translateY(-3px);}
+.pill{background:#5F623D;color:#E4E2C2;font-size:16px;font-weight:700;border-radius:12px;padding:3px 12px;}
+.chipx{height:38px;padding:0 11px;border-radius:11px;background:#EFC0AE;color:#3A2A20;
+  border:3px solid #33301F;display:inline-flex;align-items:center;gap:6px;
+  font-size:17px;font-weight:800;box-shadow:var(--shadow-sm);}
+.bar{height:13px;background:#546638;border-radius:7px;overflow:hidden;margin-top:10px;}
+.bar>i{display:block;height:100%;background:var(--matcha-deep);border-radius:7px;}
+.bar-light{height:20px;background:#DDD2AC;border:2px solid #B9AC84;border-radius:10px;
+  overflow:hidden;position:relative;margin-top:10px;}
+.bar-light b{position:absolute;left:0;top:0;bottom:0;background:#C8DF97;}
+.bar-light i{position:absolute;left:0;top:0;bottom:0;background:var(--matcha-deep);}
+.dot{width:11px;height:11px;border-radius:50%;background:#9AA38B;border:1.5px solid #6B7360;
+  display:inline-block;vertical-align:middle;margin-right:5px;}
+.dot.work{background:#6FCB45;border-color:#3E7F27;}
+.dot.wait{background:var(--gold);border-color:#B98A18;animation:blink 1.6s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.35}}
+.nametag{display:inline-block;background:#FDFCE3;border:3px solid #2E2A1F;border-radius:12px;
+  padding:5px 14px 6px;text-align:center;box-shadow:0 3px 0 rgba(40,60,30,.28);line-height:1.15;}
+.nametag.sel{border-color:#E5B32C;box-shadow:0 0 0 2.5px var(--gold),0 3px 0 rgba(40,60,30,.28);}
+.nametag .nm2{font-size:20px;font-weight:800;color:#17130A;}
+.nametag .rl{font-size:15px;font-weight:700;color:#4E6B33;margin-top:1px;}
+.sky{height:96px;border-radius:14px;border:3px solid #2E2A1F;box-shadow:var(--shadow-sm);
+  background:linear-gradient(#97CCD1,#B5D8D0 60%,#C7DDD0);}
+.type-row{display:flex;align-items:baseline;gap:16px;padding:9px 0;border-bottom:2px solid var(--ash);}
+.type-row .lbl{width:130px;font-size:14px;color:var(--text-soft);font-weight:700;flex:none;}
+.bad{background:#F6E2DE;border:2.5px dashed #C8483A;border-radius:12px;padding:16px 20px;}
+.bad li{font-size:16px;margin:6px 0 6px 20px;color:#7E3B2A;font-weight:700;}
+.toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(80px);
+  background:var(--ink-forest);color:var(--text-on-dark);padding:13px 26px;border-radius:14px;
+  border:3px solid var(--ink-line);font-size:17px;font-weight:800;box-shadow:var(--shadow);
+  transition:transform .25s;z-index:100;}
+.toast.on{transform:translateX(-50%) translateY(0);}
+footer{margin-top:46px;text-align:center;font-size:15px;color:var(--text-soft);font-weight:700;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🏝️ 南瓜暖島美學</h1>
+    <p>Pumpkin Cozy Isle　·　手繪水彩 × 等距視角 × 模擬經營遊戲　·　點色塊複製色碼</p>
+  </header>
+
+  <h2>綠系　主角</h2>
+  <div class="grid" id="g1"></div>
+
+  <h2>大地棕系　配角</h2>
+  <div class="grid" id="g2"></div>
+
+  <h2>紙白系　舞台</h2>
+  <div class="grid" id="g3"></div>
+
+  <h2>點綴　少量使用</h2>
+  <div class="grid" id="g4"></div>
+
+  <h2>字級規範</h2>
+  <div class="card">
+    <div class="type-row"><span class="lbl">大數字 800</span><span style="font-size:30px;font-weight:800">1,240</span></div>
+    <div class="type-row"><span class="lbl">主要名稱 800</span><span style="font-size:28px;font-weight:800">南瓜 AI 開發中心</span></div>
+    <div class="type-row"><span class="lbl">面板標題 800</span><span style="font-size:19px;font-weight:800">今日進度總覽</span></div>
+    <div class="type-row"><span class="lbl">內文 700</span><span style="font-size:17px;font-weight:700">中文用圓體、拉丁與數字用 Be Vietnam Pro。</span></div>
+    <div class="type-row"><span class="lbl">副標 700</span><span style="font-size:15px;font-weight:700;color:var(--text-soft)">1280 寬截圖要逐字讀得出來</span></div>
+    <div class="type-row" style="border:none"><span class="lbl">小標籤 700</span><span style="font-size:14px;font-weight:700;color:var(--text-soft)">最小 11px，建議 14px 以上</span></div>
+  </div>
+
+  <h2>元件</h2>
+  <div class="row" style="margin-bottom:16px">
+    <div class="card">
+      <h3>按鈕</h3>
+      <div class="row" style="gap:12px">
+        <button class="btn btn-primary">主要動作</button>
+        <button class="btn btn-secondary">次要動作</button>
+        <div class="capsule">工單</div>
+        <div class="ibtn">
+          <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#F4EFD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11 L12 5 L19 11 V19 H14 V14.5 H10 V19 H5 Z" fill="#EAD9A8" stroke="#F4EFD8"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom:16px">
+    <div class="panel">
+      <h3>深綠資訊面板</h3>
+      <div class="sub">深底上的文字用米白 #FDFCE3，次要資訊用 #B4C494——不要用純白，也不要用太暗的灰。</div>
+      <div class="panel-inset">
+        <div style="font-size:17px;font-weight:800;color:#EDE9C8">面板內凹陷區</div>
+        <div class="bar"><i style="width:68%"></i></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>標籤與狀態</h3>
+      <div class="row" style="gap:10px;margin-bottom:14px">
+        <span class="pill">情境企劃</span><span class="pill">AI Agent</span>
+        <span class="chipx">⚠ 1</span>
+      </div>
+      <div style="font-size:16px;font-weight:700;line-height:2">
+        <span class="dot work"></span>工作中
+        <span class="dot wait"></span>等待中（閃爍）
+        <span class="dot"></span>待命
+      </div>
+      <div class="bar-light"><b style="width:72%"></b><i style="width:34%"></i></div>
+      <div style="font-size:14px;color:var(--text-soft);margin-top:6px;font-weight:700">雙層進度：深綠＝已完成／淺綠＝含待驗收</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <h3>名牌（一般 / 選取）</h3>
+      <div class="row" style="gap:18px;margin-top:6px">
+        <div class="nametag"><div class="nm2">小柿子</div><div class="rl">PM／總協調</div></div>
+        <div class="nametag sel"><div class="nm2">小抹茶</div><div class="rl">盤點／資產管理</div></div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>場景天空（唯一合法漸層）</h3>
+      <div class="sky"></div>
+    </div>
+  </div>
+
+  <h2>禁止事項</h2>
+  <div class="bad">
+    <ul>
+      <li>紫藍漸層、霓虹光暈、玻璃擬態、深色科技風</li>
+      <li>純黑 #000 與純白 #FFF、高飽和原色</li>
+      <li>按鈕漸層光澤、模糊擴散的陰影（投影一律硬邊）</li>
+      <li>模糊的去背邊緣、殘留白底方塊、被拉伸變形的圖</li>
+      <li>素材上的假數字直接上線（一律塗掉後疊真實資料）</li>
+      <li>中文掉進黑體（＝忘了寫圓體 fallback）</li>
+    </ul>
+  </div>
+
+  <footer>南瓜暖島美學　·　陳南宏（南瓜）專屬設計語言　·　skill: pumpkin-cozy-isle</footer>
+</div>
+
+<div class="toast" id="toast">已複製</div>
+<div id="grain"></div>
+
+<script>
+const SETS = {
+  g1:[["深森林綠","#2D4321","主色／標題／深面板／主按鈕"],
+      ["極深墨綠","#1D3314","黑板風面板、最深凹陷"],
+      ["面板綠","#1C3D20","資訊面板底（比主色微亮）"],
+      ["墨線色","#10240F","所有深色描邊"],
+      ["抹茶亮綠","#81BD49","次標題、生機、成功"],
+      ["抹茶深綠","#62B149","主要動作按鈕"],
+      ["苔草綠","#898B63","靜態標籤底、次要資訊"]],
+  g2:[["陶土棕","#D4A373","木質高光、強調區塊"],
+      ["赭石棕","#B99A6B","木質家具、邊框、獎勵"],
+      ["深木棕","#4A3B18","棕底上的文字"]],
+  g3:[["紙白","#FCF9F0","主背景（老紙／畫布）"],
+      ["奶油白","#F7F1DC","卡片、膠囊按鈕"],
+      ["亞麻米白","#F4F1E8","中性面板"],
+      ["麥稈黃","#E8D9B5","次要按鈕、卡片底"],
+      ["暖灰","#DDDAD1","分隔線、未啟用"]],
+  g4:[["金黃","#F2C94C","選取態、皇冠（一頁一處）"],
+      ["磚紅","#C8483A","警示（一頁最多一處）"],
+      ["天空亮","#8FC7D4","場景漸層上緣"],
+      ["天空淡","#C7DDD0","場景漸層下緣"]]
+};
+for(const [id, list] of Object.entries(SETS)){
+  document.getElementById(id).innerHTML = list.map(([nm,hex,use])=>
+    `<div class="sw" onclick="copyHex('${hex}')">
+       <span class="chip" style="background:${hex}"></span>
+       <div class="meta"><div class="nm">${nm}</div><div class="hex">${hex}</div><div class="use">${use}</div></div>
+     </div>`).join("");
+}
+function copyHex(hex){
+  const done = ()=>{ const t=document.getElementById("toast");
+    t.textContent = "已複製 " + hex; t.classList.add("on");
+    setTimeout(()=>t.classList.remove("on"), 1400); };
+  if(navigator.clipboard?.writeText){ navigator.clipboard.writeText(hex).then(done).catch(()=>fb(hex,done)); }
+  else fb(hex, done);
+}
+function fb(hex, done){
+  const ta=document.createElement("textarea"); ta.value=hex; document.body.appendChild(ta);
+  ta.select(); document.execCommand("copy"); ta.remove(); done();
+}
+</script>
+</body>
+</html>
