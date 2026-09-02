@@ -5,6 +5,9 @@
 
 **👀 [線上看色票總覽](https://terry12260201.github.io/pumpkin-cozy-isle/)** — 所有顏色、字級、元件一頁看完，點色塊直接複製色碼。
 
+![色票總覽](docs/palette.png)
+<p align="center"><em>色票總覽頁（這一頁本身就是用這套風格做的）</em></p>
+
 ---
 
 ## 這解決什麼問題？
@@ -20,7 +23,14 @@
 **溫暖、有人味、想一直看下去。**
 不要：科技藍紫漸層、玻璃反光、霓虹發光、企業儀表板那種冷冰冰的感覺。
 
-📎 完整落地範例：[南瓜 AI 開發中心](https://terry12260201.github.io/pumpkin-ai-office/)（整個網站都是照這套做的）
+### 📎 完整落地範例
+
+[南瓜 AI 開發中心](https://terry12260201.github.io/pumpkin-ai-office/)——整個網站都是照這套規範做的：
+
+| 介面 | 角色插畫 |
+|:---:|:---:|
+| <img src="docs/example-office.png" width="100%"> | <img src="docs/example-character.png" width="100%"> |
+| 深綠面板＋奶油卡片＋硬邊投影 | 同一手感的動物角色與場景 |
 
 ## 安裝
 
